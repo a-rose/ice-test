@@ -21,6 +21,9 @@ RUN apt-get update \
     && apt-get update \
     && apt-get -y install nginx nodejs build-essential yarn supervisor git
 
+# remove default nginx config that listens on port 80
+RUN rm -f /etc/nginx/conf.d/default.conf
+
 
 # install needes software
 RUN mkdir /workspace/
