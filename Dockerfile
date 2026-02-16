@@ -39,6 +39,6 @@ COPY supervisor.conf /etc/supervisor/conf.d/
 
 RUN mkdir /workspace/cert \ && /workspace/generate_certs.sh
 
-WORKDIR /workspace/webrtc-turn-test
+WORKDIR /workspace/ice-test
 
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
