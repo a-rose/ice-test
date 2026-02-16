@@ -11,7 +11,7 @@ ENV NODE_ENV docker
 # update and install needed software
 RUN apt-get update \
     && apt-get -y upgrade \
-    && apt-get -y install apt-transport-https wget apt-utils nano net-tools \
+    && apt-get -y install apt-transport-https wget apt-utils nano net-tools gnupg \
     && echo "deb http://nginx.org/packages/ubuntu/ xenial nginx" | tee /etc/apt/sources.list.d/nginx.list \
     && wget -q -O - http://nginx.org/keys/nginx_signing.key | apt-key add - \
     && echo "deb https://deb.nodesource.com/node_6.x xenial main" | tee /etc/apt/sources.list.d/nodesource.list \
